@@ -1,0 +1,226 @@
+*{
+	margin:0;
+	padding:0;
+}
+body, html{
+	height: 100%;
+	width: 100%;
+	font-family: "Helvetica Neue", Arial, Helveticam sans-serif;
+	overflow: hidden;
+}
+
+
+
+#header{
+	display:flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: row;
+	background-color: black;
+	border-bottom: 2px solid grey;
+	width: 100%;
+	height: 4%;
+	z-index: 1;
+	position: relative;
+}
+
+#header-controls{
+	align-self: center;
+	margin-left: auto;
+}
+
+#header-credits{
+	align-self: center;
+	margin-left: auto;
+}
+
+#header-text{
+	align-self: center;
+	margin-left: auto;
+}
+
+p.headings{
+	padding-top: 15px;
+	color:orange;
+	font-size: 1.2vw;
+	font-weight: bold;
+}
+
+p.credits{
+	text-align: right;
+	padding-top: 15px;
+	color:yellow;
+	font-size: 0.7vw;
+	z-index: 1;
+}
+
+#wrapper{
+	height: 96%;
+	width: 100%;
+	position: relative;
+}
+
+#map {
+	position: relative;
+	vertical-align:middle;
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+}
+
+#deckgl-overlay{
+	left:0;
+	top:0;
+	z-index: 0;
+}
+
+#tooltip {
+	position: absolute;
+	z-index: 1;
+	pointer-events: none;
+	background: rgba(90, 98, 104, 0.6);
+	color: orange;
+	border-radius: 5px;
+	border: 1px solid #444;
+	font-size: small;
+	line-height: 100%;
+	padding: 1px;
+}
+
+#tooltip p{
+	margin: 0;
+	padding: 0;
+}
+
+.backdrop {
+	display: inline-block;
+	background: rgba(42, 42, 42, 0.7);
+	border-radius: 5px;
+	border: 1px solid #444;
+	padding: 5px 10px;
+	color: #fff;
+	line-height: 100%;
+	font-size: small;
+	z-index: 1;
+}
+
+label {
+	white-space: pre-wrap;
+}
+
+#menu {
+	position: absolute;
+	left: 10px;
+	top: 30px;
+}
+
+.form-control-sm {
+	font-size: 0.6rem !important;;
+    height: calc(1em + 0.5rem + 2px) !important;
+    padding: 0 0 !important;
+}
+
+.btn-sm, .btn-group-sm > .btn {
+	font-size: 0.6rem !important;
+    padding: 0 0;
+}
+
+.btn-warning {
+	background-color: orange !important;
+}
+
+#legend {
+	padding: 10px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	line-height: 18px;
+	position: absolute;
+	right: 15px;
+	bottom: 30px;
+}
+
+.legend-key {
+	display: inline-block;
+	border-radius: 20%;
+	width: 10px;
+	height: 10px;
+	margin-right: 5px;
+}
+#bottom-bar-btn {
+	 padding: 10px 15px;
+	 position:relative;
+	 bottom:20px;
+	 left:50%;
+	 z-index:1;
+}
+
+#bottombar {
+	display: flex;
+	background-color: rgb(0, 0, 0);
+	border-top: 2px solid grey;
+	height: 0;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	bottom: 0;
+	left: 0;
+	overflow-x: hidden;
+	transition: 0.5s;
+}
+
+#chart{
+	position: relative;
+	height: 100%;
+	width: 85%;
+	background-color: rgb(65, 67, 75);
+	border: 1px solid darkorange;
+}
+
+#chart-control{
+	padding-left: 1%;
+	position: relative;
+	color: #fff;
+	height: 100%;
+	width: 15%;
+	font-size: small;
+}
+
+rect:hover {  fill:darkorange; }
+.axis {  font: 10px sans-serif; color: orangered}
+
+.axis path,
+.axis line {
+	fill: none;
+	stroke: orangered;
+	shape-rendering: crispEdges;
+}
+
+.x.axis path {  display: none; }
+
+.d3-tip {
+	line-height: 1;
+	padding: 12px;
+	background: rgba(65, 67, 75, 0.7);
+	color: #fff;
+	border-radius: 2px;
+	z-index: 2;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+	box-sizing: border-box;
+	display: inline;
+	font-size: 10px;
+	width: 100%;
+	line-height: 1;
+	color: rgba(0, 0, 0, 0.8);
+	content: "\25BC";
+	position: absolute;
+	text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+	margin: -1px 0 0 0;
+	top: 100%;
+	left: 0;
+}
