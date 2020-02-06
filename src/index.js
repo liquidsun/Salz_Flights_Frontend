@@ -18,7 +18,6 @@ const interface_skeleton = {
 };
 
 
-
 function on_load() {
     //Create map and all interface
     CreateInterface(interface_skeleton)

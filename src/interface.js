@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import $ from 'jquery'
 import {ConstructWMSLayer,MAPGL,DECK,ConstructDeckArc,ConstructDeckPoints} from "./map";
-import {CreateGraph,ClearGraph} from './d3_graphs'
+import {CreateChart,ClearChart} from './d3_graphs'
 
 //Constructs all interface parts
 function CreateInterface(interface_skeleton){
@@ -423,12 +423,12 @@ function layerRemoveButtonClickHandler(layer){
 
 //Handles remove button events in bottombar menu
 function chartRemoveButtonClickHandler() {
-    ClearGraph()
+    ClearChart()
 }
 
 //Handles creating graphs events in bottombar menu
 function chartLoadButtonClickHandler(values,type) {
-    CreateGraph(values,type);
+    CreateChart(values,type);
 }
 
 export {CreateInterface}

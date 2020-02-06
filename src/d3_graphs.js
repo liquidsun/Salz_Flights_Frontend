@@ -1,12 +1,12 @@
 import * as d3 from "d3";
 import $ from 'jquery';
-import {getDataFromDB} from './db_access'
+import {GetDataFromDB} from './db_access'
 import bartip from "d3-tip"
 
 //Creates barchart for passed data object
 //data object have to have gr attribute for X axis
 //and count attribute for Y axis of the barchart
-function build_flights_chart(data){
+function buildFlightsChart(data){
     data.then(e=> {
         //console.log(e);
         d3.select('svg').remove();
@@ -67,15 +67,15 @@ function build_flights_chart(data){
 }
 
 //Clears the graph area from any charts
-function ClearGraph() {
+function ClearChart() {
     d3.select('svg').remove();
 }
 
 //Gets the data from Express server backend and builds
 //barchart in the graph area
-function CreateGraph(values,type){
-    let data = getDataFromDB(values,type);
-    build_flights_chart(data)
+function CreateChart(values,type){
+    let data = GetDataFromDB(values,type);
+    buildFlightsChart(data)
 }
 
-export {CreateGraph,ClearGraph}
+export {CreateChart,ClearChart}

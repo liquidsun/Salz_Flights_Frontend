@@ -2,7 +2,7 @@ import axios from "axios";
 //Communicate with Express backend to get the data for graphs
 //based on user choices from the bottom bar's user interface.
 //Passed parameters determine which request will be send to the server
-function getDataFromDB(values,type){
+function GetDataFromDB(values,type){
     if (type == 'flights') {
         //console.log('here')
         if (values[0] == 1) {
@@ -85,4 +85,4 @@ function getDataFromDB(values,type){
         }
     }
 }
-export {getDataFromDB}
+export {GetDataFromDB}
