@@ -9,5 +9,5 @@ npm run build
 ```
 to bundle your application
 
-bundled version is also avaliable 
-in dist folder 
+Bundled version is also avaliable 
+in dist folder. 
