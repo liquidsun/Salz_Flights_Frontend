@@ -1,3 +1,5 @@
+[**demo**](https://nostalgic-poincare-b8d557.netlify.com/) 
+  
 This project has been created using **webpack scaffold**, you can download repository,
 run
 ```
@@ -7,7 +9,7 @@ to install all modules and
 ```
 npm run build
 ```
-to bundle your application
+to bundle your application.
 
-bundled version is also avaliable 
-in dist folder 
+Bundled version is also directly avaliable 
+in dist folder. 
